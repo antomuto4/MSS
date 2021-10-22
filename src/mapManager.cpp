@@ -1,0 +1,2 @@
+// make an int, check if the what the int is and map the value to a map that mentions it's global bounds
+// global bounds - you get a warning to return back to the center of the map and if ignored, fade to black and teleport player to the center of the map
