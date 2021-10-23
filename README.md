@@ -2,6 +2,7 @@
 
 ***table of contents***
 - [Introduction](#introduction)
+- [Credits](#credits)
     - [Tutorial](#tutorial)
     - [Window](#window)
         - [Chaning Resolution](#changing-resolution)
@@ -16,9 +17,9 @@ I absolutely do not own anything of SFML and have not written it myself, I am me
 
 SFML's License can be found [__here__](https://www.sfml-dev.org/license.php)
 
-Credits:
+### Credits
 
-Font: [FFF Forward](https://www.1001fonts.com/fff-forward-font.html) by [Fonts For Flash](https://www.1001fonts.com/users/fontsforflash/)
+***Font:*** [FFF Forward](https://www.1001fonts.com/fff-forward-font.html) by [Fonts For Flash](https://www.1001fonts.com/users/fontsforflash/)
 
 # Tutorial
 
