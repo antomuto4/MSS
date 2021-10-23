@@ -9,6 +9,7 @@
     - [Text](#text)
     - [Item Description Example](#item-description-example)
     - [Animation](#animation)
+    - [Compiling](#compiling)
 
 # Introduction
 This little modification builds on top of [SFML](https://www.sfml-dev.org/) to make wonderful library even more accessable to beginners. Which is also useful for people studying Game Engines so they can get to see how little lines can be turned into big projects.
@@ -56,3 +57,14 @@ animation::speed(1.8);
 animation::frames(10);
 player.setTextureRect(sf::IntRect{0, 32*animation::counterAnimation, 16, 32});
 ```
+
+## Compiling
+When you write code you usually (hopefully) want to get the chance to actually see if it works. In order to do that you need to compile your program with the necessary libraries. Since we're using SFML, we need to add those options.
+
+```g++ main.cpp -lsfml-window -lsfml-graphics -lsfml-system -lsfml-audio -lsfml-network```
+
+for more information, please refer to SFML's Page on ["SFML and Linux"](https://www.sfml-dev.org/tutorials/2.5/start-linux.php)
+
+["Compiling SFML with CMAKE"](https://www.sfml-dev.org/tutorials/2.5/compile-with-cmake.php)
+
+or ["SFML and Code::Blocks (MinGW)"](https://www.sfml-dev.org/tutorials/2.5/start-cb.php)
