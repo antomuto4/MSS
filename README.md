@@ -14,7 +14,7 @@
 # Introduction
 This little modification builds on top of [SFML](https://www.sfml-dev.org/) to make wonderful library even more accessable to beginners. Which is also useful for people studying Game Engines so they can get to see how little lines can be turned into big projects.
 
-I absolutely do not own anything of SFML and have not written it myself, I am merely an entheusiast who wants to make it more accessable for others without giving up on learning how to make games without an A+++ bloated game engine.
+I absolutely do not own anything of SFML and have not written it myself, I am merely an entheusiast who wants to make it more accessable for others without giving up on learning how to make games without an AAA bloated game engine.
 
 SFML's License can be found [__here__](https://www.sfml-dev.org/license.php)
 
