@@ -2,12 +2,12 @@
 
 namespace animation{
 	unsigned int microsecond = 100000; //1000000
-	void speed(double num){
+	void Speed(double num){
 	usleep(num * microsecond);
 	}
 
     int counterAnimation;
-    void frames(int frames){
+    void Frames(int frames){
         counterAnimation++;
         if(counterAnimation == frames){
 	        counterAnimation = 0;
