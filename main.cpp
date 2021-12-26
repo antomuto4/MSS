@@ -5,11 +5,8 @@
 int main()
 {
     // changing resolution
-    win::Create(256, 224, "Mode 7");
+    win::resolution(1280, 720);
     window.setFramerateLimit(60);
-
-    float fX = 60.f;
-    float fY = 100.f;
 
     // font
     sf::Font font;
@@ -19,23 +16,13 @@ int main()
             text.setCharacterSize(18);
             info.setCharacterSize(18);
 
-	d_text::Description("The door won't budge");
-	d_text::Dialogue("This is a test");
+	d_text::description("The door won't budge");
+	d_text::dialogue("This is a test");
 
-    // message on startup
-    std::cout << "\tINSTRUCTIONS\n";
-	std::cout << "------------------------------------\n";
-	std::cout << "Left & Right Arrow:\tMove Camera\n";
-	std::cout << "WASD:\tMove Sprite\n";
-	std::cout << "HJKL:\tIncrease & Decrease fX/fY (stretch)\n";
-
-    // map
-    sf::Sprite map;
-    sf::Texture texture_map;
-    if(!texture_map.loadFromFile("src/sprites/SuperMarioKartMapMushroomCup1.png"));
-    map.setTexture(texture_map);
-
-    while (window.isOpen()){
+    sf::CircleShape shape(100.f);
+    shape.setFillColor(sf::Color::Green);
+        while (window.isOpen())
+    {
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -43,58 +30,15 @@ int main()
                 window.close();
         }
 
-        // camera
-        sf::View view(sf::FloatRect(0, 0, fX, fY));
-        view.rotate(70.f);
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-            map.rotate(0.5f);
-        }
+    window.clear();
+    window.draw(shape);
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
-            map.rotate(-0.5f);
-        }
-        
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
-           map.move(0, -5); 
-        }
-
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
-           map.move(0, 5); 
-        }
-        
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
-           map.move(-5, 0); 
-        }
-
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
-           map.move(5, 0); 
-        }
-        
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::L)){
-            fX = fX + 10;
-        }
-
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::H)){
-            fX = fX - 10;
-        }
-
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::K)){
-            fY = fY - 10;
-        }
-
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::J)){
-            fY = fY + 10;
-        }
-
-        window.clear();
-
-        // drawing text
-        window.setView(view);
-        window.draw(map);
-	    //window.draw(info);
-        //window.draw(text);
-	    window.display();
+    // drawing text
+	window.draw(info);
+	window.draw(text);
+	window.display();
     }
+
     return 0;
 }
