@@ -9,6 +9,7 @@
     - [Text](#text)
         - [Item Description Example](#item-description-example)
     - [Animation](#animation)
+    - [Camera](#camera)
     - [Compiling](#compiling)
 
 # Introduction
@@ -57,6 +58,17 @@ animation::speed(1.8);
 animation::frames(10);
 player.setTextureRect(sf::IntRect{0, 32*animation::counterAnimation, 16, 32});
 ```
+
+## Camera
+So far, this version does not have any changes from the original SFML Camera, I just changed the syntax slightly.
+in `main.cpp`:
+```
+camera::setSize(1280.f, 720.f);
+window.setView(camera::view);
+```
+
+SFML by default does not support 3D and it was made with 2D in mind. However I plan on doing some research on creating a Psuedo 3D Camera, a technque used in the SNES (mode 7).
+
 
 ## Compiling
 When you write code you usually (hopefully) want to get the chance to actually see if it works. In order to do that you need to compile your program with the necessary libraries. Since we're using SFML, we need to add those options.
