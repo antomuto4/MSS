@@ -33,6 +33,9 @@ int main()
 
     window.clear();
     window.draw(shape);
+	// camera
+	//camera::setSize(1280.f, 720.f); /* Position of Camera */
+	//window.setView(camera::view);
 
     // drawing text
 	window.draw(info);
