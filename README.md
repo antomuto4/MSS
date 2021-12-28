@@ -60,14 +60,19 @@ player.setTextureRect(sf::IntRect{0, 32*animation::counterAnimation, 16, 32});
 ```
 
 ## Camera
-So far, this version does not have any changes from the original SFML Camera, I just changed the syntax slightly.
+I am definitely not talented enough to write my own 2D camera, so all I did for now is rewrite the syntax slightly but I have done absolutely nothing to contribute to it's functionality.
 in `main.cpp`:
 ```
 camera::setSize(1280.f, 720.f);
 window.setView(camera::view);
 ```
+### BUT
+SFML by default does **not support 3D** and it was made with 2D in mind. However I plan on doing some research on creating a Psuedo 3D Camera, a technque used in the SNES (mode 7). This way I at least have something to offer that SFML by itself does not, so that other people do not need to do the math or research behind how it works. However I highly suggest you do as the techniques used to develop this look is very interesting and unique.
 
-SFML by default does not support 3D and it was made with 2D in mind. However I plan on doing some research on creating a Psuedo 3D Camera, a technque used in the SNES (mode 7).
+### Examples of Psuedo 3D Camera
+- [Super Mario Kart](https://youtu.be/AlAmXXNz5ac?t=215)
+- [F-Zero](https://youtu.be/BIe4AvKLSa4?t=14)
+- [Ace wo Nerae](https://youtu.be/nfAUZcS_f_w?t=95)
 
 
 ## Compiling
