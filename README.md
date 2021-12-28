@@ -62,6 +62,8 @@ player.setTextureRect(sf::IntRect{0, 32*animation::counterAnimation, 16, 32});
 When you write code you usually (hopefully) want to get the chance to actually see if it works. In order to do that you need to compile your program with the necessary libraries. Since we're using SFML, we need to add those options.
 
 ```g++ main.cpp -lsfml-window -lsfml-graphics -lsfml-system -lsfml-audio -lsfml-network```
+or use/edit the `Makefile`, to compile:
+```make```
 
 for more information, please refer to SFML's Page on ["SFML and Linux"](https://www.sfml-dev.org/tutorials/2.5/start-linux.php)
 
