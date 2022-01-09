@@ -6,11 +6,11 @@ namespace animation{
 	usleep(num * microsecond);
 	}
 
-    int counterAnimation;
+    int c_Animation;
     void Frames(int frames){
-        counterAnimation++;
-        if(counterAnimation == frames){
-	        counterAnimation = 0;
+        c_Animation++;
+        if(c_Animation == frames){
+	        c_Animation = 0;
         }
     }
 
