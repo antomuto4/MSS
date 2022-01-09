@@ -4,44 +4,51 @@
 
 int main()
 {
-    // changing resolution
-    win::resolution(1280, 720);
-    window.setFramerateLimit(60);
+  // changing resolution
 
-    // font
-    sf::Font font;
-	if(!font.loadFromFile("src/font/FFFFORWA.TTF")){ printf("ERROR: FAILED TO LOAD FONT");}
-        text.setFont(font);
-        info.setFont(font);
-            text.setCharacterSize(18);
-            info.setCharacterSize(18);
+  // TODOOO: lock the aspect ratio to 16:9
+  win::resolution(1280, 720, "Window");
+  window.setFramerateLimit(60);
+  
+  // font
 
-	d_text::description("The door won't budge");
-	d_text::dialogue("This is a test");
+  //TODO: insert in a seperate cpp file 
+  sf::Font font;
+  if(!font.loadFromFile("src/font/FFFFORWA.TTF")){ printf("ERROR: FAILED TO LOAD FONT");}
 
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
-        while (window.isOpen())
+  // TODO: rename text and info to something that makes a bit more fucking sense
+  text.setFont(font);
+  info.setFont(font);
+  text.setCharacterSize(18);
+  info.setCharacterSize(18);
+  
+  d_text::Description("The door won't budge");
+  d_text::Dialogue("Dialogue text");
+  
+  sf::CircleShape shape(100.f);
+  shape.setFillColor(sf::Color::Green);
+  while (window.isOpen())
     {
-        sf::Event event;
-        while (window.pollEvent(event))
+      sf::Event event;
+      while (window.pollEvent(event))
         {
-            if (event.type == sf::Event::Closed)
-                window.close();
+	  if (event.type == sf::Event::Closed)
+	    window.close();
         }
+      
+      
+      window.clear();
+      window.draw(shape);
 
-
-    window.clear();
-    window.draw(shape);
-	// camera
-	//camera::setSize(1280.f, 720.f); /* Position of Camera */
-	//window.setView(camera::view);
-
-    // drawing text
-	window.draw(info);
-	window.draw(text);
-	window.display();
+      // camera
+      //camera::setSize(1280.f, 720.f); /* Position of Camera */
+      //window.setView(camera::view);
+      
+      // drawing text
+      window.draw(info);
+      window.draw(text);
+      window.display();
     }
-
-    return 0;
+  
+  return 0;
 }
