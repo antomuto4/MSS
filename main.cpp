@@ -16,12 +16,13 @@ int main()
   sf::Font font;
   if(!font.loadFromFile("src/font/FFFFORWA.TTF")){ printf("ERROR: FAILED TO LOAD FONT");}
 
-  // TODO: rename text and info to something that makes a bit more fucking sense
+  // TODOO: rename text and info to something that makes a bit more fucking sense
   text.setFont(font);
   info.setFont(font);
   text.setCharacterSize(18);
   info.setCharacterSize(18);
   
+  // TODOOO: should add multiple sentence function
   d_text::Description("The door won't budge");
   d_text::Dialogue("Dialogue text");
   
