@@ -7,7 +7,7 @@ int main()
   // changing resolution
 
   // TODOOO: lock the aspect ratio to 16:9
-  win::resolution(1280, 720, "Window");
+  win::Resolution(1280, 720, "Window");
   window.setFramerateLimit(60);
   
   // font
