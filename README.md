@@ -35,14 +35,14 @@ and matching those numbers with whatever resolution you see fit.
 ## Text
 To draw a text on the screen you can use:
 
-```d_text::dialogue("This is a test");```
+```d_text::Dialogue("This is a test");```
 
 This will try to center the text in the middle of the screen.
 
 ### Item Description Example
 If you're working on an RPG, you likely want some item descriptions when you're interacting with objects in the overworld, a little example for this would be:
 
-```d_text::description("The door won't budge");```
+```d_text::Description("The door won't budge");```
 
 As of right now, we don't have multilple sentences available. Meaning when you want to write descriptions, you can't press on "Next" and have it say even more. It's limited to one string as of now.
 
