@@ -29,7 +29,7 @@ SFML's License can be found [__here__](https://www.sfml-dev.org/license.php)
 
 ### Changing Resolution
 Changing the resolution can be possible by simply using:
-```win::resolution(1280, 720);```
+```win::Resolution(1280, 720);```
 and matching those numbers with whatever resolution you see fit.
 
 ## Text
@@ -53,17 +53,17 @@ The setup of the animation system is there is an int called `counterAnimation` w
 
 Let's assume you made an `if` statement for moving right. And you have exactly 10 frames for that walking cycle. You'd use:
 
-```animation::counterAnimation = 0
-animation::speed(1.8);
-animation::frames(10);
-player.setTextureRect(sf::IntRect{0, 32*animation::counterAnimation, 16, 32});
+```animation::c_Animation = 0
+animation::Speed(1.8);
+animation::Frames(10);
+player.setTextureRect(sf::IntRect{0, 32*animation::c_Animation, 16, 32});
 ```
 
 ## Camera
 I am definitely not talented enough to write my own 2D camera, so all I did for now is rewrite the syntax slightly but I have done absolutely nothing to contribute to it's functionality.
 in `main.cpp`:
 ```
-camera::setSize(1280.f, 720.f);
+camera::SetSize(1280.f, 720.f);
 window.setView(camera::view);
 ```
 ### BUT
