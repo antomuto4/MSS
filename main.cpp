@@ -5,24 +5,11 @@
 int main()
 {
   // changing resolution
-
-  // TODOOO: lock the aspect ratio to 16:9
   win::Resolution(1280, 720, "Window");
   window.setFramerateLimit(60);
-  
-  // font
 
-  //TODO: insert in a seperate cpp file 
-  sf::Font font;
-  if(!font.loadFromFile("src/font/FFFFORWA.TTF")){ printf("ERROR: FAILED TO LOAD FONT");}
-
-  // TODOO: rename text and info to something that makes a bit more fucking sense
-  text.setFont(font);
-  info.setFont(font);
-  text.setCharacterSize(18);
-  info.setCharacterSize(18);
-  
-  // TODOOO: should add multiple sentence function
+  // text
+  loadFont();
   d_text::Description("The door won't budge");
   d_text::Dialogue("Dialogue text");
   
@@ -45,7 +32,7 @@ int main()
       //camera::setSize(1280.f, 720.f); /* Position of Camera */
       //window.setView(camera::view);
       
-      // drawing text
+      // render
       window.draw(info);
       window.draw(text);
       window.display();

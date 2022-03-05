@@ -1,6 +1,15 @@
 #include "include.h"
 sf::Text text;
 sf::Text info;
+sf::Font font;
+
+void loadFont(){
+  if(!font.loadFromFile("src/font/FFFFORWA.TTF")){ printf("ERROR: FAILED TO LOAD FONT");}
+  text.setFont(font);
+  info.setFont(font);
+  text.setCharacterSize(18);
+  info.setCharacterSize(18);
+}
 
 namespace d_text{
     void Dialogue(sf::String t_string){
