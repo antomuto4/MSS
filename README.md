@@ -44,7 +44,7 @@ If you're working on an RPG, you likely want some item descriptions when you're 
 
 ```d_text::Description("The door won't budge");```
 
-As of right now, we don't have multilple sentences available. Meaning when you want to write descriptions, you can't press on "Next" and have it say even more. It's limited to one string as of now.
+If you need multiple lines to convey a message, you can use the usual `\n` command to start a new line.
 
 ## Animation
 The setup of the animation system is there is an int called `counterAnimation` which is under the `animation` namespace. When you have your spritesheet/texture ready, you need to count how how many frames you want it to cycle
