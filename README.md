@@ -5,7 +5,7 @@
 - [Credits](#credits)
     - [Tutorial](#tutorial)
     - [Window](#window)
-        - [Chaning Resolution](#changing-resolution)
+        - [Changing Resolution](#changing-resolution)
     - [Text](#text)
         - [Item Description Example](#item-description-example)
     - [Animation](#animation)
